@@ -21,16 +21,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <table class="table align-middle">
                 <tr>
                     <th>NIM</th>
-                    <th>NIM</th>
-                    <th>NIM</th>
-                    <th>NIM</th>
-                    <th>NIM</th>
+                    <th>Nama</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Alamat</th>
+                    <th>Action</th>
                 </tr>
                 <tr th:each="godata:${goData}">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td th:text="${godata.noktp}"></td>
+                    <td th:text="${godata.nama}"></td>
+                    <td th:text="${#calendars.format(godata.tgllahir, 'dd-MMM-yyyy')}"></td>
+                    <td th:text="${godata.alamat}"></td>
                     <td>
                         <a href="/detil">Detail</a>
                         <a href="/edit">Edit</a>
@@ -39,7 +39,5 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </tr>
             </table>
         </div>
-        
-        <div>Database KTP Indonesia</div>
     </body>
 </html>
